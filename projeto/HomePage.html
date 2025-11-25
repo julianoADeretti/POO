@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulamento por Interface - POO em Java</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="apresentacao">
+        <!-- Slide 0 - Título Principal -->
+        <section class="slide active" data-slide="0">
+            <div class="slide-content titulo-principal">
+                <h1>Encapsulamento por Interface</h1>
+                <h2>Programação Orientada a Objetos em Java</h2>
+                <div class="icone-java">☕</div>
+            </div>
+        </section>
+
+        <!-- Slide 1 - O que é Encapsulamento? -->
+        <section class="slide" data-slide="1">
+            <div class="slide-content">
+                <h1>O que é Encapsulamento?</h1>
+                <div class="topicos">
+                    <div class="topico">
+                        <span class="bullet">🔒</span>
+                        <p>Encapsulamento é o ato de <strong>proteger os dados internos</strong> de uma classe.</p>
+                    </div>
+                    <div class="topico">
+                        <span class="bullet">🎯</span>
+                        <p>Controla o acesso apenas por <strong>métodos permitidos</strong>.</p>
+                    </div>
+                    <div class="topico">
+                        <span class="bullet">✨</span>
+                        <p>Mantém o código <strong>seguro, organizado e fácil de manter</strong>.</p>
+                    </div>
+                </div>
+                <div class="nota">
+                    <p><strong>Nota:</strong> O encapsulamento é um dos pilares da POO. Ele controla como o código externo acessa os atributos e comportamentos de um objeto. Isso evita erros, protege informações sensíveis e facilita mudanças futuras, pois a lógica interna fica escondida.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2 - Interfaces e Encapsulamento -->
+        <section class="slide" data-slide="2">
+            <div class="slide-content">
+                <h1>Interfaces e Encapsulamento</h1>
+                <div class="topicos">
+                    <div class="topico">
+                        <span class="bullet">📋</span>
+                        <p>Interfaces definem o <strong>"contrato"</strong> de um objeto.</p>
+                    </div>
+                    <div class="topico">
+                        <span class="bullet">❓</span>
+                        <p>Elas dizem <strong>o que precisa ser feito</strong>, mas não como.</p>
+                    </div>
+                    <div class="topico">
+                        <span class="bullet">🔐</span>
+                        <p>Permitem <strong>esconder a implementação real</strong>.</p>
+                    </div>
+                </div>
+                <div class="nota">
+                    <p><strong>Nota:</strong> Quando usamos interfaces, estamos criando uma camada extra de encapsulamento. O restante do sistema só enxerga os métodos definidos na interface — não conhece atributos internos, regras, cálculos ou detalhes ocultos. A interface controla o acesso e protege a lógica da classe.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3 - Por que Interfaces Encapsulam? -->
+        <section class="slide" data-slide="3">
+            <div class="slide-content">
+                <h1>Por que Interfaces Encapsulam?</h1>
+                <div class="topicos">
+                    <div class="topico">
+                        <span class="bullet">👁️</span>
+                        <p>Somente os <strong>métodos da interface</strong> ficam acessíveis.</p>
+                    </div>
+                    <div class="topico">
+                        <span class="bullet">🎭</span>
+                        <p>A classe concreta fica <strong>escondida atrás do contrato</strong>.</p>
+                    </div>
+                    <div class="topico">
+                        <span class="bullet">🔄</span>
+                        <p>Trocar a implementação <strong>não quebra o sistema</strong>.</p>
+                    </div>
+                    <div class="topico">
+                        <span class="bullet">🧪</span>
+                        <p>Ideal para <strong>modularidade e testes</strong>.</p>
+                    </div>
+                </div>
+                <div class="nota">
+                    <p><strong>Nota:</strong> Se um objeto é utilizado através de sua interface, qualquer modificação interna não afeta quem usa o objeto. Isso é encapsulamento puro: o código externo depende apenas do contrato, não da implementação. Assim, é fácil trocar classes, testar partes do sistema e manter o código limpo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4 - Diferença entre Interface e Classe Abstrata -->
+        <section class="slide" data-slide="4">
+            <div class="slide-content">
+                <h1>Diferença entre Interface e Classe Abstrata</h1>
+                <div class="comparacao">
+                    <div class="coluna">
+                        <h3>Interfaces</h3>
+                        <ul>
+                            <li>Definem somente o que deve ser feito</li>
+                            <li>Não têm estado interno</li>
+                            <li>Permitem múltiplas implementações</li>
+                        </ul>
+                    </div>
+                    <div class="separador">VS</div>
+                    <div class="coluna">
+                        <h3>Classes Abstratas</h3>
+                        <ul>
+                            <li>Podem ter atributos e métodos completos</li>
+                            <li>Representam conceitos mais específicos</li>
+                            <li>Só pode haver uma herança</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nota">
+                    <p><strong>Nota:</strong> As interfaces servem para definir habilidades e funcionalidades. Já classes abstratas representam uma estrutura incompleta que compartilha lógica entre subclasses. Interfaces são mais flexíveis; classes abstratas dão uma base mais forte.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5 - Resumo das Diferenças -->
+        <section class="slide" data-slide="5">
+            <div class="slide-content">
+                <h1>Resumo das Diferenças</h1>
+                <table class="tabela-comparacao">
+                    <thead>
+                        <tr>
+                            <th>Interfaces</th>
+                            <th>Classes Abstratas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Contrato</td>
+                            <td>Estrutura + comportamento</td>
+                        </tr>
+                        <tr>
+                            <td>Sem atributos de instância</td>
+                            <td>Podem ter atributos</td>
+                        </tr>
+                        <tr>
+                            <td>Múltiplas implementações</td>
+                            <td>Herança única</td>
+                        </tr>
+                        <tr>
+                            <td>Foco em "o que fazer"</td>
+                            <td>Foco em "como fazer parcialmente"</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="nota">
+                    <p><strong>Nota:</strong> Essa tabela sintetiza o núcleo da diferença: a interface é 100% contrato; a classe abstrata mistura contrato com implementação parcial.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6 - Exemplo Prático em Java -->
+        <section class="slide" data-slide="6">
+            <div class="slide-content">
+                <h1>Exemplo Prático em Java</h1>
+                <div class="exemplo-codigo">
+                    <div class="codigo-header">Interface → Contrato</div>
+                    <pre><code>public interface IConta {
+    void depositar(double valor);
+    void sacar(double valor);
+    double getSaldo();
+}</code></pre>
+
+                    <div class="codigo-header">Classe → Implementação</div>
+                    <pre><code>public class ContaBancaria implements IConta {
+    private double saldo;
+
+    @Override
+    public void depositar(double valor) {
+        saldo += valor;
+    }
+
+    @Override
+    public void sacar(double valor) {
+        saldo -= valor;
+    }
+
+    @Override
+    public double getSaldo() {
+        return saldo;
+    }
+}</code></pre>
+
+                    <div class="codigo-header">Main → Uso real</div>
+                    <pre><code>public class Main {
+    public static void main(String[] args) {
+        IConta conta = new ContaBancaria();
+        conta.depositar(100);
+        conta.sacar(30);
+
+        System.out.println("Saldo atual: " + conta.getSaldo());
+    }
+}</code></pre>
+                </div>
+                <div class="nota">
+                    <p><strong>Nota:</strong> Esse é um exemplo claro de encapsulamento por interface: o programa principal só conhece IConta, não a classe ContaBancaria. Se amanhã trocarmos a implementação por ContaPremium, nada no código muda — porque tudo depende do contrato da interface.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7 - Analogia Criativa -->
+        <section class="slide" data-slide="7">
+            <div class="slide-content">
+                <h1>Analogia Criativa</h1>
+                <div class="analogia">
+                    <div class="analogia-item">
+                        <div class="icone-grande">📺</div>
+                        <h3>Interface = Controle remoto</h3>
+                    </div>
+                    <div class="analogia-seta">➡️</div>
+                    <div class="analogia-item">
+                        <div class="icone-grande">📟</div>
+                        <h3>Classe concreta = Televisão</h3>
+                    </div>
+                </div>
+                <div class="destaque-analogia">
+                    <p>Você controla, mas não vê o funcionamento interno</p>
+                </div>
+                <div class="nota">
+                    <p><strong>Nota:</strong> O controle remoto só mostra botões. A TV faz todo o trabalho escondida. Da mesma forma, a interface mostra métodos, e a classe guarda o funcionamento real.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8 - Conclusão -->
+        <section class="slide" data-slide="8">
+            <div class="slide-content">
+                <h1>Conclusão</h1>
+                <div class="topicos-conclusao">
+                    <div class="topico-conclusao">
+                        <span class="check">✅</span>
+                        <p>Interfaces <strong>encapsulam comportamentos</strong></p>
+                    </div>
+                    <div class="topico-conclusao">
+                        <span class="check">✅</span>
+                        <p><strong>Protegem a implementação</strong></p>
+                    </div>
+                    <div class="topico-conclusao">
+                        <span class="check">✅</span>
+                        <p>Facilitam <strong>manutenção e substituições</strong></p>
+                    </div>
+                    <div class="topico-conclusao">
+                        <span class="check">✅</span>
+                        <p>Tornam o código mais <strong>seguro e profissional</strong></p>
+                    </div>
+                </div>
+                <div class="nota final">
+                    <p><strong>Encapsulamento por interface é um dos mecanismos mais importantes para garantir modularidade e segurança no código. Ele permite que sistemas evoluam sem quebrar outras partes.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Controles de Navegação -->
+        <div class="controles">
+            <button class="btn-nav" id="btnAnterior">⬅ Anterior</button>
+            <div class="indicador-slides">
+                <span id="slideAtual">1</span> / <span id="totalSlides">9</span>
+            </div>
+            <button class="btn-nav" id="btnProximo">Próximo ➡</button>
+        </div>
+
+        <!-- Barra de Progresso -->
+        <div class="barra-progresso">
+            <div class="progresso" id="progresso"></div>
+        </div>
+    </div>
+
+    <!-- JS renomeado -->
+    <script src="Server.js"></script>
+</body>
+</html>
